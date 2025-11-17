@@ -1,3 +1,19 @@
 {
-    "schedules":[]
+  "schedules": [
+    {
+      "id": "a99eba3a-31c5-410a-a574-53c701768795",
+      "name": "Hikaro",
+      "when": "17-11-2025 18:00"
+    },
+    {
+      "id": "16a68670-e319-4c96-99a7-ddbd2f59bda1",
+      "name": "Bernardo",
+      "when": "17-11-2025 19:00"
+    },
+    {
+      "id": "e6a59a3e-d37b-4b11-8bdb-6b2fd2317a05",
+      "name": "Gabrielle",
+      "when": "18-11-2025 10:00"
+    }
+  ]
 }

@@ -1,4 +1,6 @@
 import dayjs from "dayjs"
+import { scheduleNew } from "../../services/schedule-new.js"
+
 import { v4 as uuidv4 } from "uuid";
 
 const form = document.querySelector("form")
@@ -11,7 +13,7 @@ selectedDate.value = inputToday;
 selectedDate.min = inputToday;
 
 
-form.onsubmit = (event) => {
+form.onsubmit = async (event) => {
     event.preventDefault()
 
     try{
@@ -36,10 +38,10 @@ form.onsubmit = (event) => {
         
         const idWhenSched = uuidv4()
 
-        console.log({
-            idWhenSched,
-            whenSched,
-            name})
+        await scheduleNew({
+            id: idWhenSched,
+            name,
+            when: whenSched})
 
 
     }catch(error){
