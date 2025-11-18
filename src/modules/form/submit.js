@@ -1,5 +1,6 @@
 import dayjs from "dayjs"
 import { scheduleNew } from "../../services/schedule-new.js"
+import {schedulesDay} from "../schedules/load.js"
 
 import { v4 as uuidv4 } from "uuid";
 
@@ -42,6 +43,8 @@ form.onsubmit = async (event) => {
             id: idWhenSched,
             name,
             when: whenSched})
+
+        schedulesDay()
 
 
     }catch(error){
