@@ -44,7 +44,9 @@ form.onsubmit = async (event) => {
             name,
             when: whenSched})
 
-        schedulesDay()
+        await schedulesDay()
+
+        clientName.value = ""
 
 
     }catch(error){
